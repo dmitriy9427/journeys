@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "LexendZetta-Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: url("LexendZetta-Bold.ttf");
+}
+
+@font-face {
+  font-family: "LexendZetta-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("LexendZetta-Regular.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("OpenSans-Regular.ttf");
+}
