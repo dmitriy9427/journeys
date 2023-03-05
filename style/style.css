@@ -1,5 +1,5 @@
-@import url(./src/style/vendor/fonts.css);
-@import url(./src/style/normalize.css);
+@import url(./vendor/fonts.css);
+@import url(./normalize.css);
 
 * {
   --lexend-fonts-400: "LexendZetta-Regular";
