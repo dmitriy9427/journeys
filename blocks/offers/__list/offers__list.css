@@ -1,7 +1,0 @@
-.offers__list {
-  display: grid;
-  column-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  margin: 0;
-  padding-bottom: 114px;
-}

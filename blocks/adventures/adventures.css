@@ -1,8 +1,0 @@
-.adventures {
-  width: calc(100% - 10%);
-  background-color: transparent;
-  margin: 0 auto 208px;
-  display: grid;
-  column-gap: 60px;
-  grid-template-columns: repeat(2, 1fr);
-}

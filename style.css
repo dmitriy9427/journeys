@@ -1,49 +1,397 @@
-@import url(./style/vendor/fonts.css);
-@import url(./style/normalize.css);
-@import url(./blocks/body/body.css);
-/* header */
-@import url(./blocks/header/header.css);
-@import url(./blocks/header/__panel/header__panel.css);
-@import url(./blocks/header/__panel-logo/header__panel-logo.css);
-@import url(./blocks/header/__panel-navigation/header__panel-navigation.css);
-@import url(./blocks/header/__panel-button/header__panel-button.css);
-@import url(./blocks/header/__panel-button-book/header__panel-button-book.css);
-/* excursion */
-@import url(./blocks/excursion/excursion.css);
-@import url(./blocks/excursion/__trip/excursion__trip.css);
-@import url(./blocks/excursion/__title/excursion__title.css);
-@import url(./blocks/excursion/__img/excursion__img.css);
-@import url(./blocks/excursion/__images/excursion__images.css);
-@import url(./blocks/excursion/__image/excursion__image.css);
-@import url(./blocks/excursion/__image-name/excursion__image-name.css);
-@import url(./blocks/excursion/__image-country/excursion__image-country.css);
-@import url(./blocks/excursion/__headers/excursion__headers.css);
-/* main */
-@import url(./blocks/main/main.css);
-/* adventures */
-@import url(./blocks/adventures/adventures.css);
-@import url(./blocks/adventures/__about/adventures__about-header.css);
-@import url(./blocks/adventures/__about/adventures__about.css);
-@import url(./blocks/adventures/__about/adventures__about-title.css);
-@import url(./blocks/adventures/__about/adventures__about-text.css);
-@import url(./blocks/adventures/__great/adventures__great.css);
-@import url(./src/blocks/adventures/__great/adventures__great-text.css);
-@import url(./blocks/adventures/__great/adventures__great-button.css);
-@import url(./blocks/adventures/__images/adventures__images.css);
-@import url(./blocks/adventures/__images/adventures__images-frame_text.css);
-@import url(./blocks/adventures/__images/adventures__images-frame_img.css);
-@import url(./blocks/adventures/__images/adventures__images-frame.css);
-@import url(./blocks/adventures/__images/adventures__images-frame-citate.css);
-@import url(./blocks/adventures/__image/adventures__image.css);
-@import url(./blocks/adventures/__img/adventures__img.css);
-/* offers */
-@import url(./blocks/offers/offers.css);
-@import url(./blocks/offers/__header/offers__header.css);
-@import url(./blocks/offers/__title/offers__title.css);
-@import url(./blocks/offers/__list/offers__list.css);
-@import url(./blocks/offers/__list/offers__list-element.css);
-@import url(./blocks/offers/__list/offers__list-image.css);
-@import url(./blocks/offers/__list/offers__list-city.css);
-@import url(./blocks/offers/__list/offers__list-country.css);
-@import url(./blocks/offers/__oval/offers__oval.css);
-@import url(./blocks/offers/__oval/offers__oval-text.css);
+@import url(./src/style/vendor/fonts.css);
+@import url(./src/style/normalize.css);
+
+* {
+  --lexend-fonts-400: "LexendZetta-Regular";
+  --open-sans: "Open Sans";
+  --section-title-fz: 56px;
+  --white-color: #fff;
+  --color-333: #333333;
+  --black-color: #000;
+}
+
+body {
+  max-width: 1440px;
+  min-width: 320px;
+  height: 100vh;
+  background-color: #0c1a29;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #6347f9;
+  padding: 16px 0 0;
+  height: 680px;
+}
+
+.main {
+  background-color: #fff;
+  padding-top: 361px;
+}
+
+.header__panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: calc(100% - 7%);
+  margin: 0 auto;
+}
+
+.header__panel-logo {
+  width: 93px;
+  height: 48px;
+}
+
+.header__panel-button-book {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  font-family: var(--lexend-fonts-400);
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+  background-color: transparent;
+  width: 154px;
+  height: 48px;
+}
+
+.header__panel-button {
+  font-family: var(--open-sans);
+  font-size: 16px;
+  color: var(--white-color);
+  border: 0;
+  background-color: transparent;
+  margin-right: 60px;
+  padding: 0;
+}
+
+.excursion {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 120px auto 0;
+}
+
+.excursion__headers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Lexend Zetta";
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+.excursion__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.excursion__image-country {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  color: rgba(51, 51, 51, 0.496405);
+}
+
+.excursion__image-name {
+  margin: 4px 0 4px 10px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #333333;
+}
+
+.excursion__images {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  column-gap: 15px;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.excursion__img {
+  width: 250px;
+  height: 330px;
+  border-radius: 5px;
+  box-shadow: 9px -12px 7px 4px rgba(152, 152, 224, 0.2);
+}
+
+.excursion__image_gg {
+  height: 370px;
+}
+
+.excursion__title {
+  font-size: 72px;
+  line-height: 111%;
+  letter-spacing: 14px;
+  margin: 19px 0 86px;
+}
+
+.excursion__trip {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.adventures {
+  width: calc(100% - 10%);
+  background-color: transparent;
+  margin: 0 auto 208px;
+  display: grid;
+  column-gap: 60px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.adventures__about {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.adventures__about-title {
+  font-family: "Lexend Zetta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 114%;
+  letter-spacing: 16px;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+.adventures__about-text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #333333;
+  margin: 31px 0 47px;
+  padding: 0;
+}
+
+.adventures__about-header {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(51, 51, 51, 0.49833);
+  margin: 31px 0 31px;
+  padding: 0;
+}
+
+.adventures__great {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+.adventures__great-text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: rgba(51, 51, 51, 0.496405);
+  margin: 3px 0 32px;
+}
+
+.adventures__great-button {
+  max-width: 154px;
+  font-family: "Lexend Zetta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #f07c52;
+  padding: 14px 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.adventures__great-button:hover {
+  opacity: 0.7;
+  color: blue;
+  transition: all 1s ease;
+}
+
+.adventures__image {
+  max-width: 470px;
+}
+
+.adventures__images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.adventures__images-frame {
+  max-width: 238px;
+  padding: 40px 32px 0;
+  background: linear-gradient(180deg, #dd6f5e 0%, #f07c52 99.92%);
+  position: absolute;
+  z-index: 2;
+  top: 96px;
+  left: 20px;
+}
+
+.adventures__images-frame-citate {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: rgba(255, 255, 255, 0.502972);
+  margin: 12px 0 16px;
+}
+
+.adventures__images-frame_text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #ffffff;
+  margin: 0;
+}
+
+.adventures__images-frame_img {
+  width: 196px;
+  height: 198px;
+  margin: 0 auto;
+}
+
+.adventures__img {
+  max-width: 470px;
+}
+
+.offers {
+  background: rgba(254, 114, 84, 0.08);
+}
+
+.offers__title {
+  font-family: "Lexend Zetta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 114%;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #000000;
+  margin: 34px auto 67px;
+  padding: 0;
+  max-width: 673px;
+}
+
+.offers__oval-text {
+  font-family: "Lexend Zetta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 8px;
+  color: #ffffff;
+}
+
+.offers__oval {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  background-color: #f07c52;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 224px;
+  left: 32px;
+}
+
+.offers__list {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  margin: 0;
+  padding-bottom: 114px;
+}
+
+.offers__list-image {
+  max-width: 370px;
+  height: 400px;
+}
+
+.offers__list-element {
+  list-style-type: none;
+  position: relative;
+}
+
+.offers__list-country {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: rgba(0, 0, 0, 0.502972);
+  margin: 0;
+}
+
+.offers__list-city {
+  font-family: "Lexend Zetta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 8px;
+  color: #000000;
+  margin: 8px 0 2px;
+}
+
+.offers__header {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.500821);
+  padding: 75px 0 0;
+  margin: 0;
+}
