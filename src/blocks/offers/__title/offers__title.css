@@ -1,0 +1,13 @@
+.offers__title {
+  font-family: "Lexend Zetta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 114%;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #000000;
+  margin: 34px auto 67px;
+  padding: 0;
+  max-width: 673px;
+}
